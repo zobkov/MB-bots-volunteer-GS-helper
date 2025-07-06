@@ -19,13 +19,6 @@ logging_config = {
             'class': 'logging.StreamHandler',
             'formatter': 'formatter_2',
             'stream': sys.stdout
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'formatter': 'formatter_2',
-            'filename': os.path.join(LOG_DIR, f'Log {datetime.now().strftime("%d.%m.%Y")}.log'),
-            'mode': 'a',  # Append mode
-            'encoding': 'utf-8'  # Добавляем поддержку Unicode
         }
     },
     'root': {

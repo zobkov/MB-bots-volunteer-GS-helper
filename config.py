@@ -14,6 +14,7 @@ class DatabaseConfig:
 @dataclass
 class Config:
     db: DatabaseConfig
+    api_host: str
 
 def load_config() -> Config:
     env = Env()
@@ -26,5 +27,6 @@ def load_config() -> Config:
             database=env.str("DB_NAME"),
             host=env.str("DB_HOST"),
             port=env.int("DB_PORT", 5432)
-        )
+        ),
+        api_host=env.str("API_HOST", "0.0.0.0")
     )
