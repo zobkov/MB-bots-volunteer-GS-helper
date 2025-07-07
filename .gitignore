@@ -183,3 +183,4 @@ test-generator/src/db-test.py
 *.db
 *_test.py
 .env
+service_account.json
